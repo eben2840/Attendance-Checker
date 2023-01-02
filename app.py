@@ -8,23 +8,56 @@ app=Flask(__name__)
 
 def sendtelegram(params):
     # 5467638311:AAGjx6lVUgSe2ihu9j7oHGjzNipW0hoEU_A
-    url = "https://api.telegram.org/bot5467638311:AAGjx6lVUgSe2ihu9j7oHGjzNipW0hoEU_A/sendMessage?chat_id=-635192651&text=" + urllib.parse.quote(params)
+    url = "https://api.telegram.org/bot5738222395:AAEM5NwDAN1Zc052xI_i9-YlrVnvmSkN9p4/sendMessage?chat_id=-633441737&text=" + urllib.parse.quote(params)
     print("THere is nothing here.")
     content = urllib.request.urlopen(url).read()
     print(content)
     return content
     
-@app.route('/',methods=['GET','POST'])
+@app.route('/home',methods=['GET','POST'])
 def home():
     if request.method=='POST':
         indexNumber = request.form.get("indexNumber")
-        img = qrcode.make(indexNumber)
+        Name = request.form.get("Name")
+        Time = request.form.get("Time")
+        
+        img = qrcode.make( "Student Attendance" + '\n' + 
+                      "Student ID = " + indexNumber  + '\n' + 
+                      "Student Name = " + Name + '\n' + 
+                      "Student Time = " + Time )
+        # img = qrcode.make(Name)
+        # img = qrcode.make(Time)
         type(img)  # qrcode.image.pil.PilImage
         img.save("static/img/qrcode.png")
-        sendtelegram(indexNumber)
-        return render_template('index.html')
+        sendtelegram( 
+                      "Student ID = " + indexNumber  + '\n' + 
+                      "Student Name = " + Name + '\n' + 
+                      "Student Time = " + Time 
+           )
+       
+        
+        
+        return redirect(url_for('scan'))
     return render_template('index.html')
 
+@app.route('/',methods=['GET','POST'])
+def test():
+    if request.method=='POST':
+        return render_template('test.html')
+    return render_template('test.html')
+
+@app.route('/sreen',methods=['GET','POST'])
+def sreen():
+    if request.method=='POST':
+        return render_template('sreen.html')
+    return render_template('sreen.html')
+
+
+@app.route('/scan',methods=['GET','POST'])
+def scan():
+    if request.method=='POST':
+        return render_template('scan.html')
+    return render_template('scan.html')
 
 @app.route('/upload')
 def upload():

@@ -11,20 +11,41 @@
   </head>
   <body>
       
-    <div class="container">
+    <div class="container" style="background-color:#000; padding:20px;">
+      <div class="style" style="background-color:blue; padding:20px; border-radius:20px;">
+        <h5>Student Attendance</h5>
+        Confirm Attendance
+        
+      </div>
+      <p style="text-align:center; margin-top:10px;">Verification</p>
+      
 <form action="" method="post">
   <div class="form-group">
     <label for=""></label>
-    <input type="text" name="indexNumber" id="" class="form-control" placeholder="" aria-describedby="helpId">
-    <small id="helpId" class="text-muted">Help text</small>
-    <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+  <div class="form-floating mb-3" >
+    <input type="text" name="indexNumber" id="" class="form-control" placeholder="id" style="border-style: outset; " aria-describedby="helpId">
+    
+  </div>
+
+  <div class="form-floating mb-3" >
+    <input type="text" name="Name" id="" class="form-control" placeholder="Name" style="border-style: outset; " aria-describedby="helpId">
+  
+  </div>
+  
+  <div class="form-floating mb-3" >
+    <input type="text" name="Time" id="" class="form-control" placeholder="Time" style="border-style: outset; " aria-describedby="helpId">
+   
+  </div>
+  
+   
+  <a href="/" style="text-decoration:none; color:#fff; background-color:black;"> <button type="submit" class="btn btn-primary"  style="text-align:center; width:200px; padding:10px; border-radius:20px; border:none; margin:auto; color:#000; background-color:#fff;">Submit</button></a>
   </div>
 </form>  
 <div>
   <!-- /Users/kweku/Documents/Projects/Python Projects/qrcodeteest/static/img/ -->
   <!-- <img src="url_for('static', filename='img/qrcode.png')" style=" width:100%"  srcset=""> -->
-  <img src="../static/img/qrcode.png" style="width:100%; object-fit: fill;"  srcset="">
+<!--  <img src="../static/img/qrcode.png" style="width:100%; object-fit: fill;"  srcset="">-->
   <!-- href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}"> -->
 </div>
     </div>

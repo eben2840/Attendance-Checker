@@ -7,14 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h4>Please upload a selfie of you in the class.</h4>
-    <button id="start-camera">Start Camera</button>
-    <video id="video" width="320" height="240" autoplay></video>
-    <button id="click-photo">Click Photo</button>
-    <canvas id="canvas" width="320" height="240"></canvas>
+    <div class="container" >
+    <h1>Verify your identity</h1>
+    <p>You're Required to verify your identity before your submit your attendance</p>
+    <button id="start-camera" style="background-color:#000; margin-left:30px; border-radius:7px; color:#fff; border:none; margin-bottom:10px; padding:10px;">Enable</button>
+    <video id="video" width="300" height="220" autoplay style="margin-left:30px; "></video>
+    <button id="click-photo" style="background-color:#000; margin-left:30px; border-radius:7px; border:none; color:#fff; margin-bottom:10px; padding:10px;">Take Photo</button>
+    <canvas id="canvas" width="300" height="220" style="margin-left:30px; "></canvas>
 
-
+    <a href="/home" style="text-decoration:none; color:#fff; background-color:black;"><h6 style="text-align:center; background-color:#000; width:200px; padding:15px; border-radius:20px; margin:auto;">Verify Identity</h6></a>
+    </div>
 <script>
+
 let camera_button = document.querySelector("#start-camera");
 let video = document.querySelector("#video");
 let click_button = document.querySelector("#click-photo");
