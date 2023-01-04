@@ -22,15 +22,15 @@ def home():
         Time = request.form.get("Time")
         
         img = qrcode.make( "Student Attendance" + '\n' + 
-                      "Student ID = " + indexNumber  + '\n' + 
-                      "Student Name = " + Name + '\n' + 
-                      "Student Time = " + Time )
-        # img = qrcode.make(Name)
-        # img = qrcode.make(Time)
-        type(img)  # qrcode.image.pil.PilImage
+                    "Student ID = " + indexNumber  + '\n'
+                    "Student Name = " + Name + '\n' + 
+                    "Student Time = " + Time )
+        img = qrcode.make(Name)
+        img = qrcode.make(Time)
+        type(img)  #qrcode.image.pil.PilImage
         img.save("static/img/qrcode.png")
         sendtelegram( 
-                      "Student ID = " + indexNumber  + '\n' + 
+                      "Student ID = " + indexNumber  + '\n' 
                       "Student Name = " + Name + '\n' + 
                       "Student Time = " + Time 
            )
