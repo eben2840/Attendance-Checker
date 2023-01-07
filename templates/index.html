@@ -2,47 +2,59 @@
 <html lang="en">
   <head>
     <title>Title</title>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
       
-    <div class="container" style="background-color:#000; padding:20px;">
-      <div class="style" style="background-color:blue; padding:20px; border-radius:20px;">
+    <div class="container" style=" padding:20px;">
+      <div class="style" style="display:flex; justify-content:space-between; background-color:blue; padding:20px; border-radius:10px;">
         <h5>Student Attendance</h5>
-        Confirm Attendance
-        
+        <h6>ic</h6>
       </div>
-      <p style="text-align:center; margin-top:10px;">Verification</p>
+      
+      <div class="row" style="padding:10px;">
+      <div class="col-6" style="display:flex;  margin-top:20px; justify-content:space-between;  background-color:blue; padding:20px; border-radius:10px;">
+        <h5>Student Attendance</h5>
+        <h6>ic</h6>
+      </div>
+      <div class="col-6" style="display:flex; margin-top:20px; justify-content:space-between;  background-color:blue; padding:20px; border-radius:10px;">
+        <h5>Student Attendance</h5>
+        <h6>ic</h6>
+      </div>
+    </div>
+
+      <p class="text-muted" style="text-align:left; margin-top:10px;">Confirm Verification</p>
       
 <form action="" method="post">
-  <div class="form-group">
-    <label for=""></label>
+  
 
   <div class="form-floating mb-3" >
-    <input type="text" name="indexNumber" id="" class="form-control" placeholder="id" style="border-style: outset; " aria-describedby="helpId">
+    <input type="text" name="indexNumber" id="" class="form-control" required placeholder="id" style="border-style: outset; " aria-describedby="helpId">
     
   </div>
 
   <div class="form-floating mb-3" >
-    <input type="text" name="Name" id="" class="form-control" placeholder="Name" style="border-style: outset; " aria-describedby="helpId">
+    <input type="text" name="Name" id="" class="form-control" required placeholder="Name" style="border-style: outset; " aria-describedby="helpId">
   
   </div>
   
   <div class="form-floating mb-3" >
-    <input type="text" name="Time" id="" class="form-control" placeholder="Time" style="border-style: outset; " aria-describedby="helpId">
+    <input type="text" name="Time" id="" class="form-control" required placeholder="Time" style="border-style: outset; " aria-describedby="helpId">
    
   </div>
   
    
-  <a href="/" style="text-decoration:none; color:#fff; background-color:black;"> <button type="submit" class="btn btn-primary"  style="text-align:center; width:200px; padding:10px; border-radius:20px; border:none; margin:auto; color:#000; background-color:#fff;">Submit</button></a>
-  </div>
+  <a href="/" style="text-decoration:none;  color:#fff; background-color:black;"> <button type="submit" class="btn btn-primary"  style="text-align:center; width:200px; padding:10px; border-radius:20px; border:none; margin:auto; color:#000; background-color:#fff;">Submit</button></a>
+
 </form>  
-<div>
+
+  
+
   <!-- /Users/kweku/Documents/Projects/Python Projects/qrcodeteest/static/img/ -->
   <!-- <img src="url_for('static', filename='img/qrcode.png')" style=" width:100%"  srcset=""> -->
 <!--  <img src="../static/img/qrcode.png" style="width:100%; object-fit: fill;"  srcset="">-->
